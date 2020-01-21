@@ -1,0 +1,75 @@
+/* OVERRIDE */
+
+            body {
+                background-image: linear-gradient(white,#e0f3fb);
+                background-image: url(../img/fundo_b.jpg);
+                background-size: cover;
+                height: 100vh;
+            }
+
+            .form-signin {
+                border-radius: 15px;
+                background-image: linear-gradient(#db802d,#e55537);
+            }
+
+            .btn-success {
+                color: #fff;
+                background-color: #00acec;
+                border-color: #2261a8;
+                width: 100%;
+                font-weight: 600;
+                font-size: 20px;
+            }
+            
+            .btn-success:active:hover, .btn-success.active:hover, .open > .dropdown-toggle.btn-success:hover, .btn-success:active:focus, .btn-success.active:focus, .open > .dropdown-toggle.btn-success:focus, .btn-success:active.focus, .btn-success.active.focus, .open > .dropdown-toggle.btn-success.focus {
+                color: #fff !important;
+                background-color: #2bc3fb !important;
+                border-color: #bb6d27 !important;
+            }
+            
+            .btn-success:hover {
+                color: #fff !important;
+                background-color: #2bc3fb !important;
+                border-color: #bb6d27 !important;
+            }
+            .btn-success:focus, .btn-success.focus, .btn-success:active, .btn-success.active, .open>.dropdown-toggle.btn-success {
+                color: #fff !important;
+                background-color: #2bc3fb !important;
+                border-color: #bb6d27 !important;
+            }
+
+            .row.text-center a{
+                color:#25ddff
+            }
+
+            .row.text-center {
+                color: #fff;
+                font-family: 'Titillium Web', sans-serif;
+            }
+
+            .form-signin h2 {
+                color:#fff;
+                font-family: 'Titillium Web', sans-serif;
+                font-weight:600;
+            }
+
+            .form-signin input {
+                font-family: 'Titillium Web', sans-serif;
+            }
+            
+            .logo {
+                margin: auto;
+                display: block;
+                max-width: 500px;
+                margin-bottom: 27px;
+            }
+            
+            img.logo {
+                width: 100%;
+            }
+            
+            .form-signin label {
+                color:#fff;
+                font-family: 'Titillium Web',sans-serif;
+                font-size:18px;
+            }

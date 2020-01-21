@@ -1,0 +1,26 @@
+body {
+    background-image: linear-gradient(white,#e0f3fb);
+    background-image: url(../img/fundo_b.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-color: rgba(221, 221, 221, 0) !important;
+    background-attachment: fixed;
+}
+
+.greet {
+    width: fit-content;
+    position: absolute;
+    background-color: #272727;
+    color: #fff;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    right:5px;
+}
+
+.greet a{
+    color:#fb2828;
+    font-weight:600
+
+}
+

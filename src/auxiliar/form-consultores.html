@@ -1,0 +1,141 @@
+<?php
+session_start();
+include_once("conexao.php");
+$id = $_GET['id'];
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Distribuidor - Login</title>
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/signin.css" rel="stylesheet">
+	</head>
+	<body>
+		<div>
+			<div style="background: #42dea4;">
+				<h2>Área restrita</h2>
+				
+				<form method="POST" action="atualiza.php">
+					<table border="0">
+					<tr>
+						<td><label>Consultor:</label></td>
+						<td></td>
+						<td><label>Tabela:</label>   </td>
+						<td><label>Situação:</label> </td>
+					</tr>
+					<tr>
+						<td><input type="text" name="codigo" class="form-dados"></td>   
+						<td><input type="text" name="nome" class="form-consultor"></td>    
+						<td><input type="text" name="tabela" class="form-dados"></td>  
+						<td><input type="text" name="Situacao" class="form-dados"></td>
+					</tr>
+					</table>
+					<br>
+					<table border="0">
+					<tr>
+						<td></td>
+						<td align="center"><label>01</label></td>
+						<td align="center"><label>02</label></td>
+						<td align="center"><label>03</label></td>
+						<td align="center"><label>04</label></td>
+						<td align="center"><label>05</label></td>
+						<td align="center"><label>06</label></td>
+						<td align="center"><label>07</label></td>
+						<td align="center"><label>08</label></td>
+						<td align="center"><label>09</label></td>
+						<td align="center"><label>10</label></td>
+						<td align="center"><label>11</label></td>
+						<td align="center"><label>12</label></td>
+						<td align="center"><label>13</label></td>
+						<td align="center"><label>14</label></td>
+						<td align="center"><label>15</label></td>
+						<td align="center"><label>16</label></td>
+						<td align="center"><label>17</label></td>
+						<td align="center"><label>18</label></td>
+						<td align="center"><label>19</label></td>
+						<td align="center"><label>20</label></td>
+						<td align="center"><label>21</label></td>
+						<td align="center"><label>22</label></td>
+						<td align="center"><label>23</label></td>
+						<td align="center"><label>24</label></td>
+						<td align="center"><label>25</label></td>
+						<td align="center"><label>26</label></td>
+						<td align="center"><label>27</label></td>
+						<td align="center"><label>28</label></td>
+						<td align="center"><label>29</label></td>
+						<td align="center"><label>30</label></td>
+						<td align="center"><label>31</label></td>
+					</tr>
+						<td><b>Contador convecional: </b></td>
+						<td><input type="text" name="qtd1" class="form-dia">    </td>
+						<td><input type="text" name="qtd2" class="form-dia">    </td>
+						<td><input type="text" name="qtd3" class="form-dia">    </td>
+						<td><input type="text" name="qtd4" class="form-dia">    </td>
+						<td><input type="text" name="qtd5" class="form-dia">    </td>
+						<td><input type="text" name="qtd6" class="form-dia">    </td>
+						<td><input type="text" name="qtd7" class="form-dia">    </td>
+						<td><input type="text" name="qtd8" class="form-dia">    </td>
+						<td><input type="text" name="qtd9" class="form-dia">    </td>
+						<td><input type="text" name="qtd10" class="form-dia">    </td>
+						<td><input type="text" name="qtd11" class="form-dia">    </td>
+						<td><input type="text" name="qtd12" class="form-dia">    </td>
+						<td><input type="text" name="qtd13" class="form-dia">    </td>
+						<td><input type="text" name="qtd14" class="form-dia">    </td>
+						<td><input type="text" name="qtd15" class="form-dia">    </td>
+						<td><input type="text" name="qtd16" class="form-dia">    </td>
+						<td><input type="text" name="qtd17" class="form-dia">    </td>
+						<td><input type="text" name="qtd18" class="form-dia">    </td>
+						<td><input type="text" name="qtd19" class="form-dia">    </td>
+						<td><input type="text" name="qtd20" class="form-dia">    </td>
+						<td><input type="text" name="qtd21" class="form-dia">    </td>
+						<td><input type="text" name="qtd22" class="form-dia">    </td>
+						<td><input type="text" name="qtd23" class="form-dia">    </td>
+						<td><input type="text" name="qtd24" class="form-dia">    </td>
+						<td><input type="text" name="qtd25" class="form-dia">    </td>
+						<td><input type="text" name="qtd26" class="form-dia">    </td>
+						<td><input type="text" name="qtd27" class="form-dia">    </td>
+						<td><input type="text" name="qtd28" class="form-dia">    </td>
+						<td><input type="text" name="qtd29" class="form-dia">    </td>
+						<td><input type="text" name="qtd30" class="form-dia">    </td>
+						<td><input type="text" name="qtd31" class="form-dia">    </td>	
+					</tr>
+					<tr>
+						<td><b>Interest prioritário:</b></td>
+						<td><input type="text" name="qtd1" class="form-dia"> </td>
+						<td><input type="text" name="qtd2" class="form-dia"> </td>
+						<td><input type="text" name="qtd3" class="form-dia"> </td>
+						<td><input type="text" name="qtd4" class="form-dia"> </td>
+						<td><input type="text" name="qtd5" class="form-dia"> </td>
+						<td><input type="text" name="qtd6" class="form-dia"> </td>
+						<td><input type="text" name="qtd7" class="form-dia"> </td>
+						<td><input type="text" name="qtd8" class="form-dia"> </td>
+						<td><input type="text" name="qtd9" class="form-dia"> </td>
+						<td><input type="text" name="qtd10" class="form-dia"> </td>
+						<td><input type="text" name="qtd11" class="form-dia"> </td>
+						<td><input type="text" name="qtd12" class="form-dia"> </td>
+						<td><input type="text" name="qtd13" class="form-dia"> </td>
+						<td><input type="text" name="qtd14" class="form-dia"> </td>
+						<td><input type="text" name="qtd15" class="form-dia"> </td>
+						<td><input type="text" name="qtd16" class="form-dia"> </td>
+						<td><input type="text" name="qtd17" class="form-dia"> </td>
+						<td><input type="text" name="qtd18" class="form-dia"> </td>
+						<td><input type="text" name="qtd19" class="form-dia"> </td>
+						<td><input type="text" name="qtd20" class="form-dia"> </td>
+						<td><input type="text" name="qtd21" class="form-dia"> </td>
+						<td><input type="text" name="qtd22" class="form-dia"> </td>
+						<td><input type="text" name="qtd23" class="form-dia"> </td>
+						<td><input type="text" name="qtd24" class="form-dia"> </td>
+						<td><input type="text" name="qtd25" class="form-dia"> </td>
+						<td><input type="text" name="qtd26" class="form-dia"> </td>
+						<td><input type="text" name="qtd27" class="form-dia"> </td>
+						<td><input type="text" name="qtd28" class="form-dia"> </td>
+						<td><input type="text" name="qtd29" class="form-dia"> </td>
+						<td><input type="text" name="qtd30" class="form-dia"> </td>
+						<td><input type="text" name="qtd31" class="form-dia"> </td>	
+					</tr>
+					
+					</table>
+					<input type="submit" name="btnLogin" value="Atualizar" class="btn btn-success">
+				</form>
