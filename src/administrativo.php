@@ -13,7 +13,7 @@ $day = date('d');
 $dayDefaultColumnName =  "default_" . $day;
 $dayPriorityColumnName = "priority_" . $day;
 
-$sql_usuario = sprintf("SELECT ID, consulting_name, consulting_table, consulting_status, %s, %s, cod FROM consulting01 WHERE old_consulting = 0", $dayDefaultColumnName, $dayPriorityColumnName);
+$sql_usuario = sprintf("SELECT ID, consulting_name, consulting_table, consulting_status, %s, %s, cod, default_count, priority_count FROM consulting01 WHERE old_consulting = 0", $dayDefaultColumnName, $dayPriorityColumnName);
 $resultado_usuario = mysqli_query($conn, $sql_usuario);
 if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
 	//$row_usuario = mysqli_fetch_assoc($resultado_usuario);
@@ -108,7 +108,9 @@ else{
 						<td></td>
 						<td><label>Tabela:</label>   </td>
 						<td><label>Situação:</label> </td>
+						<td><label>Recebidos:</label> </td>
 						<td><label>Leads (dia <?php echo $day ?>):</label> </td>
+						<td><label>Recebidos:</label> </td>
 						<td><label>Prioritários:</label> </td>
 					</tr>
 					<?php
@@ -120,7 +122,9 @@ else{
 									<td><label><?php echo $row[1] ?></label></td>
 									<td align="right"><label><?php echo $row[2] ?></label></td>
 									<td align="right"><label><?php echo $row[3] ?></label></td>
+									<td align="right"><label><?php echo $row[7] ?></label></td>
 									<td align="right"><input type="text" name="leadsDia" id="leadsDia"placeholder="Leads do dia" class="form-novos-dados" value=<?php echo $row[4] ?>></td>
+									<td align="right"><label><?php echo $row[8] ?></label></td>
 									<td align="right"><input type="text" name="leadsPrioritario"  id="leadsPrioritario" placeholder="Prioritários" class="form-novos-dados"  value=<?php echo $row[5] ?> ></td>
 									<td><input type="submit" name="btnAtualizar" value="Atualizar" class="btn btn-success"></td>
 									<input type="hidden" name="cod" value= <?php echo $row[6] ?>>
@@ -136,8 +140,8 @@ else{
 						<td><input type="text" name="consultor" placeholder="Nome do Consultor" class="form-novo-consultor"></td>
 						<td><input type="text" name="tabela" placeholder="Tabela" class="form-novos-dados"></td>
 						<td><input type="text" name="situacao" placeholder="Situação" class="form-novos-dados"></td>
-						<td align="right"><input type="text" name="leadsDia" placeholder="Leads" class="form-novos-dados"></td>
-						<td align="right"><input type="text" name="leadsPrioritario" placeholder="Prioritários" class="form-novos-dados"></td>
+						<td colspan="2" align="right"><input type="text" name="leadsDia" placeholder="Leads" class="form-novos-dados"></td>
+						<td colspan="2" align="right"><input type="text" name="leadsPrioritario" placeholder="Prioritários" class="form-novos-dados"></td>
 					</tr>
 					<tr>
 						<td><input type="submit" name="btnCadastrar" value="Cadastrar" class="btn btn-success"></td>
