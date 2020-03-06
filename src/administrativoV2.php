@@ -123,9 +123,9 @@ else{
 									<td align="right"><label><?php echo $row[2] ?></label></td>
 									<td align="right"><label><?php echo $row[3] ?></label></td>
 									<td align="right"><label><?php echo $row[7] ?></label></td>
-									<td align="right"><input type="text" name="leadsDia" id="leadsDia"placeholder="Leads do dia" align="right" class="form-novos-dados" value=<?php echo $row[4] ?>></td>
+									<td align="right"><input type="text" name="leadsDia" id="leadsDia"placeholder="Leads do dia" class="form-novos-dados" value=<?php echo $row[4] ?>></td>
 									<td align="right"><label><?php echo $row[8] ?></label></td>
-									<td align="right"><input type="text" name="leadsPrioritario"  id="leadsPrioritario" placeholder="Prioritários" align="right" class="form-novos-dados"  value=<?php echo $row[5] ?> ></td>
+									<td align="right"><input type="text" name="leadsPrioritario"  id="leadsPrioritario" placeholder="Prioritários" class="form-novos-dados"  value=<?php echo $row[5] ?> ></td>
 									<td><input type="submit" name="btnAtualizar" value="Atualizar" class="btn btn-success"></td>
 									<input type="hidden" name="cod" value= <?php echo $row[6] ?>>
 									<input type="hidden" name="day" value= <?php echo $day ?>>
@@ -133,7 +133,7 @@ else{
 							</tr>
 					<?php
 						}
-						$sql_count = sprintf("SELECT sum(default_count), sum(%s), sum(priority_count), sum(%s) FROM distribuidor.consulting01 WHERE old_consulting = 0", $dayDefaultColumnName, $dayPriorityColumnName);
+						$sql_count = sprintf("SELECT sum(default_count), sum(priority_count) FROM distribuidor.consulting01");
 						$resultado_count = mysqli_query($conn, $sql_count);
 						if(($resultado_count) AND ($resultado_count->num_rows != 0)){
 							//$row_usuario = mysqli_fetch_assoc($resultado_usuario);
@@ -152,9 +152,9 @@ else{
 						<td align="center"><B>TOTAL: <B></td>
 						<td colspan="3"></td>
 						<td align="right"><label><?php echo $row[0] ?></td>
+						<td></td>
 						<td align="right"><label><?php echo $row[1] ?></td>
-						<td align="right"><label><?php echo $row[2] ?></td>
-						<td align="right"><label><?php echo $row[3] ?></td>
+						<td></td>
 						<td></td>
 					</tr>
 					<?php
